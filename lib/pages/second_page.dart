@@ -16,30 +16,35 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: Icon(Icons.shopping_cart)),
+          onPressed: () {}, child: const Icon(Icons.shopping_cart)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
         gapLocation: GapLocation.center,
         leftCornerRadius: 0,
         rightCornerRadius: 0,
-        icons: [Icons.home, Icons.card_giftcard, Icons.favorite, Icons.person],
+        icons: const [
+          Icons.home,
+          Icons.card_giftcard,
+          Icons.favorite,
+          Icons.person
+        ],
         onTap: (p0) {},
         activeIndex: 0,
       ),
       backgroundColor: Colors.white70,
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(
+        leading: const Icon(
           Icons.home,
           color: Colors.black,
         ),
-        title: Text(
+        title: const Text(
           "HOME",
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
         backgroundColor: Colors.white70,
-        actions: [
+        actions: const [
           Icon(
             Icons.notifications,
             color: Colors.black,
@@ -52,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
+                      prefixIcon: const Icon(Icons.search),
                       hintText: "Search here...",
                       fillColor: Colors.white,
                       filled: true,
@@ -70,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               Container(
@@ -81,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.settings,
                       color: Colors.white,
                     ),
@@ -91,116 +96,120 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ]),
           ),
-          preferredSize: Size(70, 70),
+          preferredSize: const Size(70, 70),
         ),
       ),
       body: Container(
         color: Colors.white70,
-        child:
-            ListView(padding: EdgeInsets.symmetric(horizontal: 15), children: [
-          SizedBox(
-            height: 30,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                gradient: LinearGradient(
-                    colors: [Color(0xff9BB8F9), Colors.blue.shade900])),
-            child: Row(children: [
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: Container(
-                  height: 130,
-                  width: 130,
-                  decoration: BoxDecoration(
-                      color: Color(0xff648DE3),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Center(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "Up to",
-                            style: TextStyle(color: Colors.white, fontSize: 20),
-                          ),
-                          Text(
-                            "70%",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "Spacial discount",
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ]),
+        child: ListView(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            children: [
+              const SizedBox(
+                height: 30,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    gradient: LinearGradient(colors: [
+                      const Color(0xff9BB8F9),
+                      Colors.blue.shade900
+                    ])),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Container(
+                      height: 130,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff648DE3),
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Center(
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: const [
+                              Text(
+                                "Up to",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              Text(
+                                "70%",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Spacial discount",
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ]),
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: Image.asset(
+                    "assets/s6.png",
+                    height: 150,
+                  ))
+                ]),
               ),
-              SizedBox(
-                width: 10,
-              ),
-              Expanded(
-                  child: Image.asset(
-                "assets/s6.png",
-                height: 150,
-              ))
-            ]),
-          ),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: 20,
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            itemBuilder: (context, index) {
-              return Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Stack(
-                          alignment: Alignment.center,
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: 20,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              child: Icon(Icons.favorite_border),
-                            ),
-                            Align(
+                            Stack(
                               alignment: Alignment.center,
-                              child: Image.asset(
-                                "assets/s6.png",
-                                height: 100,
-                              ),
+                              children: [
+                                const Positioned(
+                                  top: 0,
+                                  left: 0,
+                                  child: Icon(Icons.favorite_border),
+                                ),
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: Image.asset(
+                                    "assets/s6.png",
+                                    height: 100,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const Text("Nike Shoes"),
+                            Row(
+                              children: [
+                                const Text("\$70"),
+                                const Spacer(),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xff5682E4),
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: const Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
                             )
-                          ],
-                        ),
-                        Text("Nike Shoes"),
-                        Row(
-                          children: [
-                            Text("\$70"),
-                            Spacer(),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xff5682E4),
-                                  borderRadius: BorderRadius.circular(4)),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
-                        )
-                      ]),
-                ),
-              );
-            },
-          )
-        ]),
+                          ]),
+                    ),
+                  );
+                },
+              )
+            ]),
       ),
     );
   }
