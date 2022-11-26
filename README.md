@@ -1,6 +1,6 @@
 # shopapp
 
-A new Flutter project.
+This product for regarding UI work in Flutter.
 
 ## Getting Started
 
