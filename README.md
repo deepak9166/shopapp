@@ -1,6 +1,6 @@
 # shopapp
 
-This product for regarding UI work in Flutter.
+This product for regarding UI work in Flutter. It's for beginners 
 
 ## Getting Started
 
